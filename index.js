@@ -22,7 +22,7 @@ const tx = {
   from: ''
 }
 
-const hash = '75368FE68C34416F7BFC8992AC306C0EF3E361BFF3A20D0EBABFB29F39E23301'
+const hash = '0xd2912b4d2b191b47b014b6a05737ceb15bb0e6c17b6e8a23b083228ec4aa424b'
 const v = 'AQ=='
 const r = 'JAx3mmbiKfSictwZowYbXGIiZlaD9LaGub2YJlsw63o='
 const s = 'eTws/9+hp83TxMITpVUoDV5CsS3t2xcMnruSCsG9xuk='
@@ -41,7 +41,7 @@ console.log({
 })
 
 const pubKey = util.ecrecover(
-  Buffer.from(hash, 'hex'),
+  util.toBuffer(hash),
   Buffer.from(v, 'base64'),
   Buffer.from(r, 'base64'),
   Buffer.from(s, 'base64'),
